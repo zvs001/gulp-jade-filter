@@ -1,0 +1,30 @@
+{
+  "name": "gulp-jade-filter",
+  "version": "1.0.0",
+  "description": "jade inheritance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "jade",
+    "filter",
+    "inheritance"
+  ],
+  "author": "Zaynchkovsky",
+  "license": "ISC",
+  "dependencies": {
+    "minimatch": "^3.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zvs001/gulp-jade-filter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zvs001/gulp-jade-filter/issues"
+  },
+  "homepage": "https://github.com/zvs001/gulp-jade-filter#readme"
+}
