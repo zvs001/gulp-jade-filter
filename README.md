@@ -2,7 +2,13 @@
 
 This plugin help you to reduce jade compilation time.
 
+##Instalation
+```
+npm i gulp-jade-filter
+```
+
 For example, i have ```app/jade``` directory, where i create main templates like ```home.jade, about.jade, contacts.jade``` etc.
+
 ###File tree example:
 ```js
 common/
