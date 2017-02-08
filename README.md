@@ -28,7 +28,7 @@ var jadeFilter = require("gulp-jade-filter")
 
 gulp.task('jade', function () {
   return gulp.src('app/jade/**/*.{jade,pug}')
-  .pipe(jadeFilter{ match: "*.jade" })
+  .pipe( jadeFilter({ match: "*.jade" }))
   .pipe(jade())
   .pipe(gulp.dest('dist/'))
 });
