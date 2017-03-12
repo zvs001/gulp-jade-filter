@@ -38,34 +38,33 @@ gulp.task('jade', function () {
 ###Full composition (gulp#4) 
 ```js
 'use strict';
-
+ 
 const $ = require('gulp-load-plugins')({
-	rename: {
+    rename: {
     'jade-filter': 'jadeFilter'
   }
 });
-
+ 
 const gulp = require('gulp');
 const combine = require('stream-combiner2').obj
-
+ 
 gulp.task('jade', function () {
   return combine(
-    gulp.src( 'app/jade/**/*.{jade,pug}' ), //[!important] all jade/pug files you have
-    $.jadeFilter({ match: "*.pug" }),  //default=> "*.jade" (relative to gulp.src)
+    gulp.src( 'dev/jade/**/*.{jade,pug}' ), //[!important] all jade/pug files you have 
+    $.jadeFilter({ match: "*.pug" }),  //default=> "*.jade" (relative to gulp.src) 
     $.pug({
       pretty: true
     }),
-    gulp.dest( 'dist/' )
+    gulp.dest( 'app/' )
   ).on("error", $.notify.onError())
 });
-
-
+ 
+ 
 gulp.task("jade:watch", function(){
-	gulp.watch( 'app/jade/**/*.{jade,pug}', gulp.series('jade') );//all jade/pug files you have
+    gulp.watch( 'dev/jade/**/*.{jade,pug}', gulp.series('jade') );//all jade/pug files you have 
 });
-
-gulp.task('default', gulp.series('jade', 'jade:watch');
-);
+ 
+gulp.task('default', gulp.series('jade', 'jade:watch'));
 ```
 
 ##Api
